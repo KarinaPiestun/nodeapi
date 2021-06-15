@@ -23,3 +23,26 @@
  - Configurar Sequelize
  - Criar Model do user
  - Implementar Model no service
+
+
+ router.get('/' , (req,res) =>{
+    res.json({status:'lista usuario'})
+})
+
+
+router.get('/:id',(req,res)=>{
+    res.json({status:'busca usuario'})
+})
+
+
+router.post('/' ,(req,res)=>{
+    res.json({status:'cria usuario'})
+})
+
+router.put('/:id' ,(req,res) =>{
+    res.json({status:'atualiza usuario'})
+
+    router.delete('/:id' , (req,res) =>{
+        res.json({status:'apaga usuario'})
+    })
+})
