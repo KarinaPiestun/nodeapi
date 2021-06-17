@@ -1,8 +1,8 @@
 const UserService = require('./user.service')
 
 class UserController {
-    static findAll (req,res) {
-       const users =UserService.findAll()
+    static async findAll (req,res) {
+       const users = await UserService.findAll()
 
         res.json (users)  
       }

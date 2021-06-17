@@ -1,9 +1,11 @@
+const {Usuarios} = require('../database/models')
+
 const userList =[
     {
     "id": "1",
-   "nome": "Balbina",
-   "email": "balbina@email.com",
-   "telefone": "(11) 984 347 345",
+   "nome": "joao",
+   "email": "jo@email.com",
+   "telefone": "(11) 93 347 345",
    "senha": "123Mudar@uol",
    "status": true
   },
@@ -19,8 +21,8 @@ const userList =[
 
 class UserService{
     static findAll(){
-        return userList
-    }
+        return  Usuarios.findAll()
+    }   
 
     static findById (userId){
     const user = userList.find(user=>user.id =userId)
