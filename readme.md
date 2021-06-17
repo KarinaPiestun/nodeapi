@@ -81,3 +81,22 @@ No arquivo `users.routes.js`, configurar suas rotas conforme já definido acima.
  - Criar Model do user
  - Implementar Model no Service
  
+
+
+ sequelize model:create --name Usuarios --attributes nome:string,email:string,telefone:string,senha:string,status:boolean
+
+
+const path = require('path')
+
+module.exports = {
+  config: path.resolve('src', 'database', 'config', 'config.js'),
+  'models-path': path.resolve('src', 'database', 'models'),
+  'migrations-path': path.resolve('src', 'database', 'migrations')
+}
+
+create table users (
+id int unsigned primary key auto_increment,
+name varchar (50)  not null,
+password varchar (20) not null, 
+level int not null
+);
